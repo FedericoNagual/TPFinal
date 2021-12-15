@@ -1,0 +1,91 @@
+Trabajo practico final , Agencia de turismo.
+
+Consideraciones, al armar las clases del diagtrama UML 
+, se tomaron en cuenta los codigo de servicio , como los 
+codigos de paquete siendo enteros para poder usarlos 
+como PK de sus respectivas clases mas a futuro con la persistencia
+
+Por temas de escalado de la App , todas las clases en el diagrama 
+tiene id : int , ya que me sirve para acordarme de agregarlo como id
+de los campos PK ya que el dia de mañana que se quiera borrar campos 
+y /o agregarlos no genere conflictos con las tuplas, debido a que 
+su PK es un Id auto incremental
+
+/////////////////////////////////////////////////
+Clase ServicioTuristico :
+
+un mismo servicio turistico puede servir para muchas ventas de personas que quieren 
+contratar estos servicios.
+
+/////////////////////////////////////////////////
+Clase MedioPago:
+
+cumple la funcion de incluir los metodos de pagos existentes tales como
+tranferencia bancaria, mercado pago, debito , credito , efectivo y demas.
+
+/////////////////////////////////////////////////
+Clase Venta :
+
+Contiene un atributo llamado monto_venta: el cual mantiene el precio 
+de la venta en el momento que se realizo, ya que en argentina se suelen
+cambiar seguidos los precios, es necesario tener el codigo duplicado
+para poder conservar la lista de precio actual de esa fecha en particular
+Tambien existe la relacion 0..1 ya que puede existir o no 1 paquete y
+puede existir o no un servicio, desde la logica hay que controlar que 
+solo se pueden elegir una opcion y no ambas.
+
+/////////////////////////////////////////////////
+Clase PaqueteTuristico:
+
+codigo paquete , es distinto del codigo id ya que me desligo de la 
+modificacion , agregado o replanteo de los atributos de las clases 
+ademas de incluir el costo total de los paquetes
+
+/////////////////////////////////////////////////
+Clase Persona:
+
+Atributos que son indiscutibles en todas las persoans y que la mayoria
+de las veces no varian, como nombre , dni , fecha de nacimiento
+
+Direccion si puede variar , pero decidi colocarlo en Persona ya que 
+es responsabilidad de cada persona su domicilio.
+y hereda hacia la clase cliente y empleado , en una relacion de
+Es un.
+
+/////////////////////////////////////////////////
+Clase TipoServicioTuristico:
+
+Se utiliza para cargar de forma escalable los tipos de servicios
+que ofrese la agencia , hasta el momento existen 7 
+Hotel por noche/s
+Alquiler de auto
+Pasajes de colectivo
+Pasajes de avión
+Pasajes de tren
+Excursiones
+Entradas a Eventos
+
+/////////////////////////////////////////////////
+Clase Empleado:
+
+Empleado posee email y celular que son propios de ese empleado ya que
+en teoria puede tener un email y un telefono , asociado a su trabajo
+o tambien a su rol dentro de la empresa y otro para realizar pedidos. 
+Entonces son atributos propios de ese empleado y no de todas las personas
+
+ademas de su sueldo y cargo
+
+/////////////////////////////////////////////////
+Clase Cliente:
+
+cliente posee email y celular que son propios de ese cliente ya que
+en teoria puede tener un email y un telefono , asociado a su trabajo
+o tambien para uso personal y otro para realizar pedidos. Entonces 
+son atributos propios de ese cliente y no de todas las personas
+
+/////////////////////////////////////////////////
+Clase Usuario:
+
+usuario tiene asiciado un nombre usuario y una contraseña 
+
+/////////////////////////////////////////////////
