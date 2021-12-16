@@ -1,5 +1,6 @@
 package logica;
 
+import java.io.Serializable;
 import java.util.Date;
 import javax.persistence.Basic;
 import javax.persistence.Entity;
@@ -17,7 +18,8 @@ import javax.persistence.TemporalType;
  */
 @Entity
 @Inheritance(strategy = InheritanceType.JOINED)
-public abstract class Persona {
+public abstract class Persona implements Serializable {
+
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     protected int id;
@@ -33,13 +35,14 @@ public abstract class Persona {
     public Persona() {
     }
 
-    public Persona(String nombre, String apellido, int dni, Date fecha_nac, String direccion, String nacionalidad) {
+    public Persona(int id, String nombre, String apellido, int dni, String direccion, String nacionalidad, Date fecha_nac) {
+        this.id = id;
         this.nombre = nombre;
         this.apellido = apellido;
         this.dni = dni;
-        this.fecha_nac = fecha_nac;
         this.direccion = direccion;
         this.nacionalidad = nacionalidad;
+        this.fecha_nac = fecha_nac;
     }
 
     public String getNombre() {
@@ -89,7 +92,13 @@ public abstract class Persona {
     public void setNacionalidad(String nacionalidad) {
         this.nacionalidad = nacionalidad;
     }
-    
-    
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
 
 }

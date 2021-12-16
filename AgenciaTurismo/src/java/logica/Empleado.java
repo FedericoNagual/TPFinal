@@ -5,6 +5,7 @@
  */
 package logica;
 
+import java.io.Serializable;
 import java.util.Date;
 import java.util.List;
 import javax.persistence.Basic;
@@ -21,16 +22,19 @@ import javax.persistence.PrimaryKeyJoinColumn;
  * @author Federico
  */
 @Entity
-@PrimaryKeyJoinColumn(referencedColumnName = "empleado_persona")
-public class Empleado extends Persona{
-    
+@PrimaryKeyJoinColumn(referencedColumnName = "idPersonaEmple")
+public class Empleado extends Persona implements Serializable{
+    @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private int id;
     @Basic
     private String cargo;
     private double sueldo;
     private int celular;
-    private String email;
+    private String email;    
+    //necesario para conectar con el JPA y que pueda formar las clases
+    @OneToOne
+    private int idPersonaEmple;
     @OneToOne
     private Usuario usuario;
     @OneToMany
@@ -39,17 +43,19 @@ public class Empleado extends Persona{
     public Empleado() {
     }
 
-    public Empleado(int id, String cargo, double sueldo, int celular, String email, Usuario usuario, List<Venta> listaVenta, String nombre, String apellido, int dni, Date fecha_nac, String direccion, String nacionalidad) {
-        super(nombre, apellido, dni, fecha_nac, direccion, nacionalidad);
-        this.id = id;
+    public Empleado(int idE, String cargo, double sueldo, int celular, String email, int idPersonaEmple, Usuario usuario, List<Venta> listaVenta, int id, String nombre, String apellido, int dni, String direccion, String nacionalidad, Date fecha_nac) {
+        super(id, nombre, apellido, dni, direccion, nacionalidad, fecha_nac);
+        this.id = idE;
         this.cargo = cargo;
         this.sueldo = sueldo;
         this.celular = celular;
         this.email = email;
+        this.idPersonaEmple = idPersonaEmple;
         this.usuario = usuario;
         this.listaVenta = listaVenta;
     }
 
+    
 
     public List<Venta> getListaVenta() {
         return listaVenta;
