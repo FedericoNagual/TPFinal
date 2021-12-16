@@ -1,0 +1,7 @@
+usuario 	atp
+contraseña	1826
+
+pid	3516	
+port 	3306
+
+nombre BBDD : agencia_turismo
