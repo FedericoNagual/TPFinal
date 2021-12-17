@@ -12,8 +12,8 @@
             <input type="text" placeholder="usuario" name="usuario"><br>
             <input type="password" placeholder="password" name="password"><br>
             <input type="text" placeholder="cargo" name="cargo"><br>
-            <input type="number" placeholder="sueldo" name="sueldo"><br>
-            <input type="tel" placeholder="celular" name="celular"><br>
+            <input type="text" placeholder="sueldo" name="sueldo"><br>
+            <input type="text" placeholder="celular" name="celular"><br>
             <input type="email" placeholder="email" name="email"><br>
             <input type="submit" value="Registrarse">
         </div>

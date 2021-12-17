@@ -1,7 +1,7 @@
-usuario 	atp
-contraseña	1826
+usuario 	root
+contraseña	
 
 pid	3516	
 port 	3306
 
-nombre BBDD : agencia_turismo
+nombre BBDD : tpfinal
