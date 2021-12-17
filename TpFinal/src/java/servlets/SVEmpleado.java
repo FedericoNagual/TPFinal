@@ -8,6 +8,7 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import logica.ControladorEmpleado;
 
 /**
  *
@@ -33,14 +34,14 @@ public class SVEmpleado extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        String usuario = request.getParameter("usuario");
+        String nombreUsuario = request.getParameter("usuario");
         String contrasenia = request.getParameter("password");
         String cargo =request.getParameter("cargo");
         Double sueldo = Double.parseDouble(request.getParameter("sueldo"));
-        Integer celular = Integer.parseInt(request.getParameter("celular"));
+        int celular = Integer.parseInt(request.getParameter("celular"));
         String email = request.getParameter("email");
         
-        control
+        controlEmp.crearEmpleado(nombreUsuario,contrasenia,cargo,sueldo,celular,email);
         
     }
 
