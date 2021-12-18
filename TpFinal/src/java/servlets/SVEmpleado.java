@@ -8,7 +8,7 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import logica.ControladorEmpleado;
+import logica.ControladorLogica;
 
 /**
  *
@@ -17,7 +17,7 @@ import logica.ControladorEmpleado;
 @WebServlet(name = "SVEmpleado", urlPatterns = {"/SVEmpleado"})
 public class SVEmpleado extends HttpServlet {
 //inicio los controler necesario
-    ControladorEmpleado controlEmp = new ControladorEmpleado();
+    ControladorLogica controlEmp = new ControladorLogica();
     
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {

@@ -5,7 +5,7 @@ package logica;
  *
  * @author Federico
  */
-public class ControladorEmpleado {
+public class ControladorLogica {
 
     public void crearEmpleado(String nombreUsuario, String contrasenia, String cargo, Double sueldo, int celular, String email) {
         Empleado empleado = new Empleado();

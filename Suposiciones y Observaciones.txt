@@ -89,3 +89,6 @@ Clase Usuario:
 usuario tiene asiciado un nombre usuario y una contraseña 
 
 /////////////////////////////////////////////////
+
+Para formar el primer paso del MVC, se armaron 2 controller 1 para la 
+persistencia y otro para la logica
