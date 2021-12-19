@@ -23,35 +23,42 @@ public abstract class Persona {
     @GeneratedValue(strategy = GenerationType.AUTO)
     protected int id_Persona;
     @Basic
-    String nombre;
-    String apellido;
-    int dni;
-    String direccion;
-    String nacionalidad;
+    protected String nombre;
+    protected String apellido;
+    protected int dni;
+    protected String direccion;
+    protected String nacionalidad;
+    protected int celular;
+    protected String email;
     @Temporal(TemporalType.DATE)
-    Date fechaNacimiento;
+    protected Date fechaNacimiento;
 
     public Persona() {
     }
 
-    public Persona(int id_Persona, String nombre, String apellido, int dni, String direccion, String nacionalidad, Date fechaNacimiento) {
+    public Persona(int id_Persona, String nombre, String apellido, int dni, String direccion, String nacionalidad, int celular, String email, Date fechaNacimiento) {
         this.id_Persona = id_Persona;
         this.nombre = nombre;
         this.apellido = apellido;
         this.dni = dni;
         this.direccion = direccion;
         this.nacionalidad = nacionalidad;
+        this.celular = celular;
+        this.email = email;
         this.fechaNacimiento = fechaNacimiento;
     }
 
-    public Persona(String nombre, String apellido, int dni, String direccion, String nacionalidad, Date fechaNacimiento) {
+    public Persona(String nombre, String apellido, int dni, String direccion, String nacionalidad, int celular, String email, Date fechaNacimiento) {
         this.nombre = nombre;
         this.apellido = apellido;
         this.dni = dni;
         this.direccion = direccion;
         this.nacionalidad = nacionalidad;
+        this.celular = celular;
+        this.email = email;
         this.fechaNacimiento = fechaNacimiento;
     }
+
     
     
 

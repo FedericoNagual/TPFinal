@@ -19,9 +19,13 @@ import javax.persistence.Id;
 public class TipoServicioTurismo {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    int id_TipoServicioTurismo;
+    private int id_TipoServicioTurismo;
     @Basic
-    String nombre;
+    private String nombre;
+
+    public TipoServicioTurismo(String nombre) {
+        this.nombre = nombre;
+    }
 
     public TipoServicioTurismo() {
     }

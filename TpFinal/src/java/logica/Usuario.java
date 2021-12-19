@@ -15,10 +15,15 @@ import javax.persistence.Id;
 public class Usuario {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    int id_usuario;
+    private int id_usuario;
     @Basic 
-    String nombre ;
-    String contrasenia;
+    private String nombre ;
+    private String contrasenia;
+
+    public Usuario(String nombre, String contrasenia) {
+        this.nombre = nombre;
+        this.contrasenia = contrasenia;
+    }
 
     public Usuario() {
     }

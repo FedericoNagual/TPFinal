@@ -14,10 +14,15 @@ import javax.persistence.Id;
 public class MedioPago {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    int id_MedioPago;
+    private int id_MedioPago;
     @Basic
-    String nombre;
-    String descripcion;
+    private String nombre;
+    private String descripcion;
+
+    public MedioPago(String nombre, String descripcion) {
+        this.nombre = nombre;
+        this.descripcion = descripcion;
+    }
 
     public MedioPago() {
     }

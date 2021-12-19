@@ -4,6 +4,6 @@ package persistencia;
  *
  * @author Federico
  */
-public class ControladoraPersistencia {
+public class ControladorPersistencia {
     
 }

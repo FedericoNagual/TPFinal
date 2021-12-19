@@ -2,11 +2,13 @@
 package logica;
 
 import java.util.Date;
+import java.util.List;
 import javax.persistence.Basic;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.OneToMany;
 import javax.persistence.OneToOne;
 
 /**
@@ -17,27 +19,45 @@ import javax.persistence.OneToOne;
 public class Empleado extends Persona {
     
     @GeneratedValue(strategy=GenerationType.AUTO)
-    int id_empleado;
+    private int id_empleado;
     @Basic
-    String cargo;
-    double sueldo;
-    int celular;
-    String email;
+    private String cargo;
+    private double sueldo;
     @OneToOne
-    Usuario usuario;
+    private Usuario usuario;
+    @OneToMany
+    private List<Venta> listaVenta;
 
     public Empleado() {
     }
 
-    public Empleado(String nombre, String apellido, int dni, String direccion, String nacionalidad,Date fechaNacimiento,int id_empleado, String cargo, double sueldo, int celular, String email, Usuario usuario) {
-        super(nombre, apellido, dni, direccion, nacionalidad, fechaNacimiento);
+    public List<Venta> getListaVenta() {
+        return listaVenta;
+    }
+
+    public void setListaVenta(List<Venta> listaVenta) {
+        this.listaVenta = listaVenta;
+    }
+
+    public Empleado(int id_empleado, String cargo, double sueldo, Usuario usuario, List<Venta> listaVenta, int id_Persona, String nombre, String apellido, int dni, String direccion, String nacionalidad, int celular, String email, Date fechaNacimiento) {
+        super(id_Persona, nombre, apellido, dni, direccion, nacionalidad, celular, email, fechaNacimiento);
         this.id_empleado = id_empleado;
         this.cargo = cargo;
         this.sueldo = sueldo;
-        this.celular = celular;
-        this.email = email;
         this.usuario = usuario;
+        this.listaVenta = listaVenta;
     }
+
+    public Empleado(String cargo, double sueldo, Usuario usuario, List<Venta> listaVenta, String nombre, String apellido, int dni, String direccion, String nacionalidad, int celular, String email, Date fechaNacimiento) {
+        super(nombre, apellido, dni, direccion, nacionalidad, celular, email, fechaNacimiento);
+        this.cargo = cargo;
+        this.sueldo = sueldo;
+        this.usuario = usuario;
+        this.listaVenta = listaVenta;
+    }
+
+    
+
 
     public int getId_empleado() {
         return id_empleado;
