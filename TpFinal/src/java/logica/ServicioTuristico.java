@@ -1,6 +1,7 @@
 
 package logica;
 
+import java.io.Serializable;
 import java.util.Date;
 import java.util.List;
 import javax.persistence.Basic;
@@ -19,7 +20,7 @@ import javax.persistence.TemporalType;
  * @author Federico
  */
 @Entity
-public class ServicioTuristico {
+public class ServicioTuristico implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private int id;

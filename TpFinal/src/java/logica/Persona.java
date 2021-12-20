@@ -1,6 +1,7 @@
 
 package logica;
 
+import java.io.Serializable;
 import java.util.Date;
 import javax.persistence.Basic;
 import javax.persistence.Entity;
@@ -18,7 +19,7 @@ import javax.persistence.TemporalType;
  */
 @Entity
 @Inheritance(strategy = InheritanceType.JOINED)
-public abstract class Persona {
+public abstract class Persona implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     protected int id_Persona;

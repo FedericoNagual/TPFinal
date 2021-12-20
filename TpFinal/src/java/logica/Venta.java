@@ -5,6 +5,7 @@
  */
 package logica;
 
+import java.io.Serializable;
 import java.util.Date;
 import javax.persistence.Basic;
 import javax.persistence.Entity;
@@ -20,7 +21,7 @@ import javax.persistence.TemporalType;
  * @author Federico
  */
 @Entity
-public class Venta {
+public class Venta implements Serializable {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)

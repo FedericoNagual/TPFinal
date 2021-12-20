@@ -1,6 +1,7 @@
 
 package logica;
 
+import java.io.Serializable;
 import java.util.Date;
 import java.util.List;
 import javax.persistence.Basic;
@@ -15,7 +16,7 @@ import javax.persistence.OneToMany;
  * @author Federico
  */
 @Entity
-public class Cliente extends Persona{
+public class Cliente extends Persona implements Serializable{
     @GeneratedValue(strategy = GenerationType.AUTO)
     private int id_Cliente;
     @OneToMany
