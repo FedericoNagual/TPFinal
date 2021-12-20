@@ -7,6 +7,7 @@ import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
 import javax.persistence.Query;
 import javax.persistence.EntityNotFoundException;
+import javax.persistence.Persistence;
 import javax.persistence.criteria.CriteriaQuery;
 import javax.persistence.criteria.Root;
 import logica.MedioPago;
@@ -21,6 +22,11 @@ public class MedioPagoJpaController implements Serializable {
     public MedioPagoJpaController(EntityManagerFactory emf) {
         this.emf = emf;
     }
+
+    public MedioPagoJpaController() {
+        emf =Persistence.createEntityManagerFactory("TpFinalPU");
+    }
+    
     private EntityManagerFactory emf = null;
 
     public EntityManager getEntityManager() {

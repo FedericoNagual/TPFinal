@@ -2,6 +2,15 @@
 <project-private xmlns="http://www.netbeans.org/ns/project-private/1">
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
-        <group/>
+        <group>
+            <file>file:/E:/Documentos/Programa%20estudio/Java%20Polo%20Tic%20Silicon/Proyectos/TPFinalObligatorio/TpFinal/src/java/logica/Empleado.java</file>
+            <file>file:/E:/Documentos/Programa%20estudio/Java%20Polo%20Tic%20Silicon/Proyectos/TPFinalObligatorio/TpFinal/src/java/servlets/SvEmpleado.java</file>
+            <file>file:/E:/Documentos/Programa%20estudio/Java%20Polo%20Tic%20Silicon/Proyectos/TPFinalObligatorio/TpFinal/src/java/servlets/SvUsuario.java</file>
+            <file>file:/E:/Documentos/Programa%20estudio/Java%20Polo%20Tic%20Silicon/Proyectos/TPFinalObligatorio/TpFinal/src/java/logica/ControladorLogica.java</file>
+            <file>file:/E:/Documentos/Programa%20estudio/Java%20Polo%20Tic%20Silicon/Proyectos/TPFinalObligatorio/TpFinal/src/java/logica/Usuario.java</file>
+            <file>file:/E:/Documentos/Programa%20estudio/Java%20Polo%20Tic%20Silicon/Proyectos/TPFinalObligatorio/TpFinal/web/empleado.jsp</file>
+            <file>file:/E:/Documentos/Programa%20estudio/Java%20Polo%20Tic%20Silicon/Proyectos/TPFinalObligatorio/TpFinal/src/java/persistencia/ControladorPersistencia.java</file>
+            <file>file:/E:/Documentos/Programa%20estudio/Java%20Polo%20Tic%20Silicon/Proyectos/TPFinalObligatorio/TpFinal/web/index.jsp</file>
+        </group>
     </open-files>
 </project-private>

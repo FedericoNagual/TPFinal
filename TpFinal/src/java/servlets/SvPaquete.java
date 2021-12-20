@@ -13,8 +13,8 @@ import javax.servlet.http.HttpServletResponse;
  *
  * @author Federico
  */
-@WebServlet(name = "SvVenta", urlPatterns = {"/SvVenta"})
-public class SvVenta extends HttpServlet {
+@WebServlet(name = "SvPaquetes", urlPatterns = {"/SvPaquetes"})
+public class SvPaquete extends HttpServlet {
 
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code> methods.
@@ -32,10 +32,10 @@ public class SvVenta extends HttpServlet {
             out.println("<!DOCTYPE html>");
             out.println("<html>");
             out.println("<head>");
-            out.println("<title>Servlet SVVenta</title>");            
+            out.println("<title>Servlet SvPaquetes</title>");            
             out.println("</head>");
             out.println("<body>");
-            out.println("<h1>Servlet SVVenta at " + request.getContextPath() + "</h1>");
+            out.println("<h1>Servlet SvPaquetes at " + request.getContextPath() + "</h1>");
             out.println("</body>");
             out.println("</html>");
         }

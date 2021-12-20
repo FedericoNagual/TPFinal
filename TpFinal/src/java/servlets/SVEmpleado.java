@@ -3,6 +3,7 @@ package servlets;
 
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.util.Date;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -14,10 +15,10 @@ import logica.ControladorLogica;
  *
  * @author Federico
  */
-@WebServlet(name = "SVEmpleado", urlPatterns = {"/SVEmpleado"})
-public class SVEmpleado extends HttpServlet {
+@WebServlet(name = "SvEmpleado", urlPatterns = {"/SvEmpleado"})
+public class SvEmpleado extends HttpServlet {
 //inicio los controler necesario
-    ControladorLogica controlEmp = new ControladorLogica();
+    ControladorLogica controlLogica = new ControladorLogica();
     
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
@@ -34,14 +35,26 @@ public class SVEmpleado extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        String nombreUsuario = request.getParameter("usuario");
-        String contrasenia = request.getParameter("password");
-        String cargo =request.getParameter("cargo");
-        Double sueldo = Double.parseDouble(request.getParameter("sueldo"));
+        for (int i=0; i <10; i++){
+            System.out.println("*****");
+        }
+        String nombre = request.getParameter("nombre");
+        String apellido = request.getParameter("apellido");
+        int dni = Integer.parseInt(request.getParameter("dni"));
+        String direccion = request.getParameter("direccion");
+        String nacionalidad = request.getParameter("nacionalidad");
         int celular = Integer.parseInt(request.getParameter("celular"));
         String email = request.getParameter("email");
+        String fechaNacimiento = request.getParameter("fechaNacimeinto");
+        String cargo =request.getParameter("cargo");
+        Double sueldo = Double.parseDouble(request.getParameter("sueldo"));
         
-        controlEmp.crearEmpleado(nombreUsuario,contrasenia,cargo,sueldo,celular,email);
+        String nombreUsuario = request.getParameter("nombreUsu");
+        String contrasenia = request.getParameter("contrasenia");
+        
+        controlLogica.crearEmpleado(nombre,apellido,dni,direccion,nacionalidad,celular,email,fechaNacimiento,cargo,sueldo,nombreUsuario,contrasenia);
+        System.out.println("Paso el controllogica crear empleado volvio al post");
+        response.sendRedirect("index.jsp");
         
     }
 

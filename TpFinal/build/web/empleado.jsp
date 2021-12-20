@@ -6,17 +6,27 @@
         <title>Empleado</title>
     </head>
     <body>
-        <--<!-- Codigo del formulario empleado -->
-        <from action="SVEmpleado" method="POST">
-        <div class="crear">
-            <input type="text" placeholder="usuario" name="usuario"><br>
-            <input type="password" placeholder="password" name="password"><br>
-            <input type="text" placeholder="cargo" name="cargo"><br>
-            <input type="text" placeholder="sueldo" name="sueldo"><br>
-            <input type="text" placeholder="celular" name="celular"><br>
-            <input type="email" placeholder="email" name="email"><br>
-            <input type="submit" value="Registrarse">
-        </div>
+        <!-- Codigo del formulario empleado -->
+        <h3>Crear un Empleado/Usuario</h3>
+    <from action="SvEmpleado" method="POST">
+        <p><label>Nombre :</label><input type="text" name="nombre"></p><br>
+        <p><label>Apellido :</label><input type="text" name="apellido"></p><br>
+        <p><label>Dni :</label><input type="text" name="dni"></p><br>
+        <p><label>Direccion :</label><input type="text" name="direccion"></p><br>
+        <p><label>Nacionalidad :</label><input type="text" name="nacionalidad"></p><br>
+        <p><label>Celular :</label><input type="text" name="celular"></p><br>
+        <p><label>Email :</label><input type="text" name="email"></p><br>
+        <p><label>FechaNacimiento :</label><input type="date" name="fechaNacimiento"></p><br>
+        <p><label>Cargo :</label><input type="text" name="cargo"></p><br>
+        <p><label>Sueldo :</label><input type="text" name="sueldo"></p><br>
+        <h4>Datos Usuario</h4>
+        <p><label>Nombre :</label><input type="text" name="nombreUsu"></p><br>
+        <p><label>Contraseña :</label><input type="password" name="contrasenia"></p><br>
+        
+        <input type="submit" value="Enviar">
+        
+        <a href="index.jsp"><input type="button" value="Cancelar"></a>
+
     </from>
-    </body>
+</body>
 </html>

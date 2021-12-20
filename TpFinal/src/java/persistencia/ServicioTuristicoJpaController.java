@@ -11,6 +11,7 @@ import java.util.ArrayList;
 import java.util.List;
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
+import javax.persistence.Persistence;
 import logica.ServicioTuristico;
 import persistencia.exceptions.NonexistentEntityException;
 
@@ -23,6 +24,11 @@ public class ServicioTuristicoJpaController implements Serializable {
     public ServicioTuristicoJpaController(EntityManagerFactory emf) {
         this.emf = emf;
     }
+
+    public ServicioTuristicoJpaController() {
+        emf = Persistence.createEntityManagerFactory("TpFinalPU");
+    }
+    
     private EntityManagerFactory emf = null;
 
     public EntityManager getEntityManager() {
