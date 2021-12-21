@@ -1,14 +1,24 @@
+<%-- 
+    Document   : clienteAgrego
+    Created on : 20-dic-2021, 20:57:20
+    Author     : Federico
+--%>
+
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>Empleado</title>
+        <title>Cliente</title>
     </head>
     <body>
-        <!-- Codigo del formulario empleado -->
-        <h3>Crear un Empleado/Usuario</h3>
-    <form action="SvEmpleado" method="POST">
+        <h1>Apartado Cliente</h1>
+        
+        <form action="SvCliente2" method="POST">
+        
+        <p><label>Id :</label><input type="text" name="id"></p><br>
+        <input type="button" value="Buscar"/><br>
+        
         <p><label>Nombre :</label><input type="text" name="nombre"></p><br>
         <p><label>Apellido :</label><input type="text" name="apellido"></p><br>
         <p><label>Dni :</label><input type="text" name="dni"></p><br>
@@ -17,16 +27,14 @@
         <p><label>Celular :</label><input type="text" name="celular"></p><br>
         <p><label>Email :</label><input type="text" name="email"></p><br>
         <p><label>FechaNacimiento :</label><input type="date" name="fechaNacimiento"></p><br>
-        <p><label>Cargo :</label><input type="text" name="cargo"></p><br>
-        <p><label>Sueldo :</label><input type="text" name="sueldo"></p><br>
-        <h4>Datos Usuario</h4>
-        <p><label>Nombre :</label><input type="text" name="nombreUsu"></p><br>
-        <p><label>Contraseña :</label><input type="password" name="contrasenia"></p><br>
         
-        <input type="submit" value="Enviar">
+        <input type="button" value="Agregar"/><br>
+        <input type="button" value="Eliminar"/><br>
+        <input type="button" value="Editar"/><br>
         
-        <a href="index.jsp"><input type="button" value="Cancelar"></a>
+        <a href="home.jsp"><input type="button" value="Volver Home"></a>
 
     </form>
-</body>
+        
+    </body>
 </html>

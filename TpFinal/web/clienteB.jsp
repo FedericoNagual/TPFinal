@@ -1,3 +1,9 @@
+<%-- 
+    Document   : clienteB
+    Created on : 20-dic-2021, 21:16:00
+    Author     : Federico
+--%>
+
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>

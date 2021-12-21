@@ -3,7 +3,7 @@ package servlets;
 
 import java.io.IOException;
 import java.io.PrintWriter;
-import java.util.Date;
+import java.sql.Date;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -35,9 +35,7 @@ public class SvEmpleado extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        for (int i=0; i <10; i++){
-            System.out.println("*****");
-        }
+        
         String nombre = request.getParameter("nombre");
         String apellido = request.getParameter("apellido");
         int dni = Integer.parseInt(request.getParameter("dni"));
@@ -53,7 +51,7 @@ public class SvEmpleado extends HttpServlet {
         String contrasenia = request.getParameter("contrasenia");
         
         controlLogica.crearEmpleado(nombre,apellido,dni,direccion,nacionalidad,celular,email,fechaNacimiento,cargo,sueldo,nombreUsuario,contrasenia);
-        System.out.println("Paso el controllogica crear empleado volvio al post");
+        
         response.sendRedirect("index.jsp");
         
     }

@@ -1,4 +1,8 @@
-
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
 package servlets;
 
 import java.io.IOException;
@@ -8,17 +12,14 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import javax.swing.JOptionPane;
-import logica.ControladorLogica;
 
 /**
  *
  * @author Federico
  */
-@WebServlet(name = "SvUsuario", urlPatterns = {"/SvUsuario"})
-public class SvUsuario extends HttpServlet {
-    ControladorLogica controlLogica =new ControladorLogica();
-    
+@WebServlet(name = "SvClienteModifica", urlPatterns = {"/SvClienteModifica"})
+public class SvClienteModifica extends HttpServlet {
+
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code> methods.
      *
@@ -29,7 +30,6 @@ public class SvUsuario extends HttpServlet {
      */
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        
         
     }
 
@@ -59,14 +59,18 @@ public class SvUsuario extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        String usuario = request.getParameter("user");
-        String contrasenia = request.getParameter("password");
-        boolean flag = controlLogica.existeUsuario(usuario,contrasenia);
+        int id = Integer.parseInt(request.getParameter("id"));
+        String nombre = request.getParameter("nombre");
+        String apellido = request.getParameter("apellido");
+        int dni = Integer.parseInt(request.getParameter("dni"));
+        String direccion = request.getParameter("direccion");
+        String nacionalidad = request.getParameter("nacionalidad");
+        int celular = Integer.parseInt(request.getParameter("celular"));
+        String email = request.getParameter("email");
+        String fechaNacimiento = request.getParameter("fechaNacimeinto");
         
-        if (flag){
-            response.sendRedirect("home.jsp");
-        }
         
+        response.sendRedirect("home.jsp");
     }
 
     /**

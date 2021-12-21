@@ -8,7 +8,7 @@
     <body>
         <!-- Codigo del formulario empleado -->
         <h3>Crear un Empleado/Usuario</h3>
-    <from action="SvEmpleado" method="POST">
+    <form action="SvEmpleado" method="POST">
         <p><label>Nombre :</label><input type="text" name="nombre"></p><br>
         <p><label>Apellido :</label><input type="text" name="apellido"></p><br>
         <p><label>Dni :</label><input type="text" name="dni"></p><br>
@@ -27,6 +27,6 @@
         
         <a href="index.jsp"><input type="button" value="Cancelar"></a>
 
-    </from>
+    </form>
 </body>
 </html>
